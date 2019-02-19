@@ -1,0 +1,62 @@
+//
+//  YXPch.pch
+//  WashingMachine
+//
+//  Created by 孙瑞中 on 2017/8/1.
+//  Copyright © 2017年 孙瑞中. All rights reserved.
+//
+
+#ifndef YXPch_pch
+#define YXPch_pch
+
+#ifdef DEBUG // 调试状态
+#define NLog(...) NSLog(__VA_ARGS__) //给nslog起个别名
+#else
+#define NLog(...)
+#endif
+
+/** 接口地址 */
+#define MURL @"http://114.215.78.133:8080/wechat/api/"
+
+/** 导航栏高度 */
+#define  navHight 64
+/** tabbar高度 */
+#define tabbarHight 49
+
+/** 屏幕宽高 */
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+/** 列表文字两边间距 */
+#define SIDESSPACING 12
+
+/** 默认table的section高度 */
+#define TABLEVIEWSECTIONHIGHT 15
+
+/** 默认字体大小 */
+#define TITIEFONT [UIFont systemFontOfSize:16]
+#define ORDINARYFONT [UIFont systemFontOfSize:14]
+#define SMALLFONT [UIFont systemFontOfSize:12]
+
+/** 颜色 */
+#define YXColors(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1.0]
+
+
+/** 提示语 */
+#define NETWORKERROR @"请检查您的网络，重新连接"
+
+//导入
+#import "Masonry.h"
+#import "UIView+Frame.h"
+#import "YXShortcut.h"
+#import "YXColor.h"
+#import "UIBarButtonItem+Extension.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "YXThirdParty.h"
+#import "MBProgressHUD.h"
+#import "BaseHandler.h"
+#import "UserDefaultsUtils.h"
+#import "UploadDownLoad.h"
+#endif /* YXPch_pch */
